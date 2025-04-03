@@ -1,0 +1,31 @@
+[core]
+	editor = "nano"
+[filter "lfs"]
+	required = true
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+[alias]
+	new = log --oneline HEAD..main
+	missing = log --oneline main..HEAD
+	log10 = log --oneline -n 10
+	recent = log -n 10 --oneline
+	checkoutpr = !git fetch --quiet $1 && git update-ref -d refs/heads/PR/$2 && git fetch $1 pull/$2/head:PR/$2 && git checkout PR/$2 && :
+	main = fetch origin main
+	rl = reflog --date=iso
+[merge]
+	conflictstyle = diff3
+[auto]
+	autoStash = true
+	autosquash = true
+[rebase]
+	autosquash = true
+	autoStash = true
+[fetch]
+	prune = true
+[push]
+	autoSetupRemote = true
+[grep]
+	lineNumber = true
+[rerere]
+	enabled = true
