@@ -53,7 +53,7 @@ return { -- Fuzzy Finder (files, lsp, etc)
           i = { ['<C-e>'] = 'move_selection_previous' },
         },
       },
-      --pickers = {}
+      --pickers = { },
       extensions = {
         ['ui-select'] = {
           require('telescope.themes').get_dropdown(),

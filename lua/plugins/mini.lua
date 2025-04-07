@@ -8,10 +8,13 @@ return {
     --  - va)  - [V]isually select [A]round [)]paren
     --  - yinq - [Y]ank [I]nside [N]ext [Q]uote
     --  - ci'  - [C]hange [I]nside [']quote
-    require('mini.ai').setup { mappings = {
-      inside = 'u',
-    }, n_lines = 500, custome_textobject = nil }
-
+    require('mini.ai').setup {
+      mappings = {
+        -- inside = 't',
+      },
+      n_lines = 500,
+      custome_textobject = nil,
+    }
     -- Add/delete/replace surroundings (brackets, quotes, etc.)
     --
     -- - saiw) - [S]urround [A]dd [I]nner [W]ord [)]Paren
