@@ -71,7 +71,7 @@ vim.opt.scrolloff = 10
 vim.opt.confirm = true
 
 -- [[ Auto installs ]]
-require 'auto_install'
+require 'denifia.auto_install'
 
 -- [[ Load modules ]]
 require 'config.lazy'
