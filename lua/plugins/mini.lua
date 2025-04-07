@@ -13,7 +13,7 @@ return {
         -- inside = 't',
       },
       n_lines = 500,
-      custome_textobject = nil,
+      custom_textobject = nil,
     }
     -- Add/delete/replace surroundings (brackets, quotes, etc.)
     --
