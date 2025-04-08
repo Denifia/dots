@@ -1,5 +1,6 @@
 return {
-  -- dotnet LSP
+  -- https://github.com/seblyng/roslyn.nvim
+  -- Dotnet LSP
   'seblyng/roslyn.nvim',
   ft = 'cs',
   ---@module 'roslyn.config'

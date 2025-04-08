@@ -1,4 +1,5 @@
 return {
+  -- https://github.com/ThePrimeagen/harpoon
   -- Provides quick access to a set of pinned/recent files
   'ThePrimeagen/harpoon',
   branch = 'harpoon2',
@@ -16,6 +17,10 @@ return {
     end, { desc = 'Toggle quick m[e]nu' })
 
     vim.keymap.set('n', '<leader><A-1>', function()
+      harpoon:list():replace_at(1)
+    end, { desc = 'Harpoon replace 1' })
+
+    vim.keymap.set('n', '<leader>p1', function()
       harpoon:list():replace_at(1)
     end, { desc = 'Harpoon replace 1' })
 

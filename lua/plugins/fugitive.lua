@@ -1,5 +1,7 @@
 return {
-  -- Wrapper for git commands
-  -- Use :Git or :G as if it was a terminal
+  -- https://github.com/tpope/vim-fugitive
+  -- Wrapper for git commands with :Git or :G
   'tpope/vim-fugitive',
+  -- Throught this would be better than it is
+  -- might end up just sticking to an external terminal
 }

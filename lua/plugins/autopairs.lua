@@ -1,4 +1,6 @@
 return {
+  -- https://github.com/windwp/nvim-autopairs
+  -- Adds companion ]})"' when you use the matching symbol
   'windwp/nvim-autopairs',
   event = 'InsertEnter',
   -- Optional dependency

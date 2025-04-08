@@ -1,4 +1,6 @@
 return {
+  -- https://github.com/nvim-treesitter/nvim-treesitter-textobjects
+  -- Understands language syntax to improve movtions, etc
   'nvim-treesitter/nvim-treesitter-textobjects',
   dependencies = { 'nvim-treesitter/nvim-treesitter' },
   init = function()
