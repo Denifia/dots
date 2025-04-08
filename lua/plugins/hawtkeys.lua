@@ -1,6 +1,5 @@
 return {
   -- https://github.com/tris203/hawtkeys.nvim
-  -- Checks for duplicate keymaps and suggests new ones
   'tris203/hawtkeys.nvim',
   dependencies = {
     'nvim-lua/plenary.nvim',

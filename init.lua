@@ -76,6 +76,6 @@ require 'denifia.auto_install'
 -- [[ Load modules ]]
 require 'config.lazy'
 require 'config.mappings'
-require 'denifia.remap'
+require 'denifia.keymap'
 require 'denifia.automation'
 --require 'denifia.lsp'
