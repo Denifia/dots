@@ -17,7 +17,7 @@ return {
     wk.add {
       { '<leader>s', group = '[S]earch' },
       { '<leader>', group = 'leader' },
-      -- { 's', group = '[S]urround' },
+      { 's', group = '[S]urround' },
       { 'g', group = '[G]o to' },
     }
   end,

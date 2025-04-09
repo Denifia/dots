@@ -17,6 +17,8 @@ return {
       custom_textobject = nil,
     }
     -- Add/delete/replace surroundings (brackets, quotes, etc.)
+    -- The trick to this is to do it fast. If you wait too long after
+    -- pressing 's' you'll be using Substitute.
     --
     -- - saiw) - [S]urround [A]dd [I]nner [W]ord [)]Paren
     -- - sd'   - [S]urround [D]elete [']quotes
