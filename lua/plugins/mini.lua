@@ -47,7 +47,28 @@ return {
       },
     }
 
-    require('mini.bracketed').setup {}
+    -- Navigate around parts of neovim with '[' and ']' key mappings
+    require('mini.bracketed').setup()
+
+    -- Provides a nicer start up experience
+    require('mini.starter').setup {}
+
+    vim.api.nvim_create_autocmd({ 'User' }, {
+      pattern = { 'MiniStarterOpened' },
+      callback = function()
+        local buf_id = vim.api.nvim_get_current_buf()
+        local buf_keymap = function(key, cmd)
+          vim.keymap.set('n', key, ('<Cmd>lua %s<CR>'):format(cmd), { buffer = buf_id, nowait = true, silent = true })
+        end
+
+        buf_keymap('<CR>', 'MiniStarter.eval_current_item()')
+
+        buf_keymap('<Up>', [[MiniStarter.update_current_item('prev')]])
+        buf_keymap('<C-e>', [[MiniStarter.update_current_item('prev')]])
+        buf_keymap('<Down>', [[MiniStarter.update_current_item('next')]])
+        buf_keymap('<C-n>', [[MiniStarter.update_current_item('next')]])
+      end,
+    })
 
     -- Simple and easy statusline.
     local statusline = require 'mini.statusline'
