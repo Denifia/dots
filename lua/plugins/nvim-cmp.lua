@@ -28,6 +28,8 @@ return {
     'saadparwaiz1/cmp_luasnip',
     'hrsh7th/cmp-nvim-lsp',
     'hrsh7th/cmp-path',
+    'hrsh7th/cmp-buffer',
+    'hrsh7th/cmp-cmdline',
     'hrsh7th/cmp-nvim-lsp-signature-help',
   },
   config = function()
@@ -77,12 +79,12 @@ return {
         --
         -- <c-i> will move you to the right of each of the expansion locations.
         -- <c-h> is similar, except moving you backwards.
-        ['<C-i>'] = cmp.mapping(function()
+        ['<C-Right>'] = cmp.mapping(function()
           if luasnip.expand_or_locally_jumpable() then
             luasnip.expand_or_jump()
           end
         end, { 'i', 's' }),
-        ['<C-h>'] = cmp.mapping(function()
+        ['<C-Left>'] = cmp.mapping(function()
           if luasnip.locally_jumpable(-1) then
             luasnip.jump(-1)
           end
@@ -101,7 +103,19 @@ return {
         { name = 'luasnip' },
         { name = 'path' },
         { name = 'nvim_lsp_signature_help' },
+        { name = 'buffer' },
       },
     }
+
+    -- `:` cmdline setup.
+    cmp.setup.cmdline(':', {
+      mapping = cmp.mapping.preset.cmdline(),
+      sources = cmp.config.sources({
+        { name = 'path' },
+      }, {
+        { name = 'cmdline' },
+      }),
+      matching = { disallow_symbol_nonprefix_matching = false },
+    })
   end,
 }
