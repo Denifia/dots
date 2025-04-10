@@ -42,10 +42,10 @@ vim.keymap.set('n', '-', '<CMD>Oil --float<CR>', { desc = 'Open parent directory
 vim.keymap.set('n', '<leader>rl', '<cmd>source %<CR>', { desc = '[R]eload [l]ua file' })
 
 -- Move window movements to colemak
-vim.keymap.set('n', '<M-h>', '<C-w><C-h>', { desc = 'Move focus to the left window' })
-vim.keymap.set('n', '<M-i>', '<C-w><C-l>', { desc = 'Move focus to the right window' })
-vim.keymap.set('n', '<M-n>', '<C-w><C-j>', { desc = 'Move focus to the lower window' })
-vim.keymap.set('n', '<M-e>', '<C-w><C-k>', { desc = 'Move focus to the upper window' })
+vim.keymap.set('n', '<C-h>', '<C-w><C-h>', { desc = 'Move focus to the left window' })
+vim.keymap.set('n', '<C-i>', '<C-w><C-l>', { desc = 'Move focus to the right window' })
+vim.keymap.set('n', '<C-n>', '<C-w><C-j>', { desc = 'Move focus to the lower window' })
+vim.keymap.set('n', '<C-e>', '<C-w><C-k>', { desc = 'Move focus to the upper window' })
 
 -- Open floating terminal
 vim.keymap.set('n', '<A-`>', '<CMD>lua require("FTerm").toggle()<CR>', { desc = 'Open floating terminal' })
