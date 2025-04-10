@@ -50,10 +50,6 @@ return {
     -- Navigate around parts of neovim with '[' and ']' key mappings
     require('mini.bracketed').setup()
 
-
-    -- Simple session management
-    require('mini.sessions').setup {}
-
     -- Simple and easy statusline.
     local statusline = require 'mini.statusline'
     statusline.setup { use_icons = vim.g.have_nerd_font }
