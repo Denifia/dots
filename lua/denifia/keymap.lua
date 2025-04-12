@@ -35,18 +35,10 @@ vim.keymap.set('n', '<leader>q', vim.diagnostic.setloclist, { desc = 'Open diagn
 vim.keymap.set('t', '<Esc><Esc>', '<C-\\><C-n>', { desc = 'Exit terminal mode' })
 
 -- Open file explorer
-vim.keymap.set('n', '<leader>oe', '<CMD>Oil --float<CR>', { desc = '[O]pen [e]xlporer' })
 vim.keymap.set('n', '-', '<CMD>Oil --float<CR>', { desc = 'Open parent directory' })
-
--- Reload current lua file
-vim.keymap.set('n', '<leader>rl', '<cmd>source %<CR>', { desc = '[R]eload [l]ua file' })
 
 -- Move window movements to colemak
 vim.keymap.set('n', '<C-h>', '<C-w><C-h>', { desc = 'Move focus to the left window' })
 vim.keymap.set('n', '<C-i>', '<C-w><C-l>', { desc = 'Move focus to the right window' })
 vim.keymap.set('n', '<C-n>', '<C-w><C-j>', { desc = 'Move focus to the lower window' })
 vim.keymap.set('n', '<C-e>', '<C-w><C-k>', { desc = 'Move focus to the upper window' })
-
--- Open floating terminal
-vim.keymap.set('n', '<A-`>', '<CMD>lua require("FTerm").toggle()<CR>', { desc = 'Open floating terminal' })
-vim.keymap.set('t', '<A-`>', '<C-\\><C-n><CMD>lua require("FTerm").toggle()<CR>', { desc = 'Close floating terminal' })

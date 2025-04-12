@@ -5,6 +5,8 @@ return {
   enabled = true,
   config = function()
     -- Better Around/Inside textobjects
+    -- These exist out of the box for Visual
+    -- mode but not other modes/commands like yank
     --
     -- Examples:
     --  - va)  - [V]isually select [A]round [)]paren
