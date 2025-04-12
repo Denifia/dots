@@ -2,6 +2,7 @@ return {
   -- https://github.com/nvim-treesitter/nvim-treesitter
   -- Highlight, edit, and navigate code
   'nvim-treesitter/nvim-treesitter',
+  enabled = true,
   build = ':TSUpdate',
   main = 'nvim-treesitter.configs',
   opts = {

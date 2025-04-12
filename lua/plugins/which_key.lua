@@ -2,6 +2,7 @@ return {
   -- https://github.com/folke/which-key.nvim
   -- Shows keybindings in popup as you type
   'folke/which-key.nvim',
+  enabled = true,
   event = 'VimEnter',
   lazy = true,
   init = function()

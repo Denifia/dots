@@ -2,6 +2,7 @@ return {
   -- https://github.com/windwp/nvim-autopairs
   -- Adds companion ]})"' when you use the matching symbol
   'windwp/nvim-autopairs',
+  enabled = true,
   event = 'InsertEnter',
   -- Optional dependency
   dependencies = { 'hrsh7th/nvim-cmp' },

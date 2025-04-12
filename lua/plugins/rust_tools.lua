@@ -2,6 +2,7 @@ return {
   -- https://github.com/simrat39/rust-tools.nvim
   -- Rust LSP
   'simrat39/rust-tools.nvim',
+  enabled = true,
   config = function()
     local rt = require 'rust-tools'
 

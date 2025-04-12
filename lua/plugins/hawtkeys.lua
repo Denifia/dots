@@ -1,6 +1,7 @@
 return {
   -- https://github.com/tris203/hawtkeys.nvim
   'tris203/hawtkeys.nvim',
+  enabled = true,
   dependencies = {
     'nvim-lua/plenary.nvim',
     'nvim-treesitter/nvim-treesitter',

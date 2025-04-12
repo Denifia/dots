@@ -2,6 +2,7 @@ return {
   -- https://github.com/seblyng/roslyn.nvim
   -- Dotnet LSP
   'seblyng/roslyn.nvim',
+  enabled = true,
   ft = 'cs',
   ---@module 'roslyn.config'
   ---@type RoslynNvimConfig
