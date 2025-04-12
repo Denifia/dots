@@ -2,6 +2,7 @@ return {
   -- https://github.com/nvim-telescope/telescope.nvim
   -- Fuzzy Finder (files, lsp, etc)
   'nvim-telescope/telescope.nvim',
+  enabled = true,
   event = 'VimEnter',
   branch = '0.1.x',
   dependencies = {

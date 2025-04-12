@@ -2,6 +2,7 @@ return {
   -- https://github.com/nvim-treesitter/nvim-treesitter-textobjects
   -- Understands language syntax to improve movtions, etc
   'nvim-treesitter/nvim-treesitter-textobjects',
+  enabled = true,
   dependencies = { 'nvim-treesitter/nvim-treesitter' },
   init = function()
     local config = require 'nvim-treesitter.configs'

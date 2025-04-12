@@ -5,6 +5,7 @@ return {
     -- `lazydev` configures Lua LSP for your Neovim config, runtime and plugins
     -- used for completion, annotations and signatures of Neovim apis
     'folke/lazydev.nvim',
+    enabled = true,
     ft = 'lua',
     opts = {
       library = {
@@ -18,6 +19,7 @@ return {
     -- https://github.com/neovim/nvim-lspconfig
     -- Connects neovim with a LSP based on the file type open
     'neovim/nvim-lspconfig',
+    enabled = true,
     dependencies = {
       -- Automatically install LSPs and related tools to stdpath for Neovim
       -- Mason must be loaded before its dependents so we need to set it up here.

@@ -2,6 +2,7 @@ return {
   -- https://github.com/ThePrimeagen/harpoon
   -- Provides quick access to a set of pinned/recent files
   'ThePrimeagen/harpoon',
+  enabled = true,
   branch = 'harpoon2',
   dependencies = { 'nvim-lua/plenary.nvim' },
   config = function()

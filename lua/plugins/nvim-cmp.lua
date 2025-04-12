@@ -2,6 +2,7 @@ return {
   -- https://github.com/hrsh7th/nvim-cmp
   -- Autocompletion
   'hrsh7th/nvim-cmp',
+  enabled = true,
   event = 'InsertEnter',
   dependencies = {
     {

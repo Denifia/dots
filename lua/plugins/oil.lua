@@ -2,6 +2,7 @@ return {
   -- https://github.com/stevearc/oil.nvim
   -- File manager
   'stevearc/oil.nvim',
+  enabled = true,
   ---@module 'oil'
   ---@type oil.SetupOpts
   dependencies = { { 'echasnovski/mini.icons', opts = {} } },

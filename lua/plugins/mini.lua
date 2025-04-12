@@ -2,6 +2,7 @@ return {
   -- https://github.com/echasnovski/mini.nvim
   -- Collection of various small independent plugins/modules
   'echasnovski/mini.nvim',
+  enabled = true,
   config = function()
     -- Better Around/Inside textobjects
     --
