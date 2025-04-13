@@ -1,81 +1,45 @@
--- [[ Global settings ]]
+-- Settings and mappings ==============
 
--- Make sure to setup `mapleader` and `maplocalleader` before everything else
-vim.g.mapleader = ' '
-vim.g.maplocalleader = '\\'
+require 'settings'
+require 'autocmds'
 
--- Any other global settings
-vim.g.have_nerd_font = true
-vim.opt.number = true
-vim.opt.relativenumber = true
+-- Auto installing ====================
 
--- Use 4 spaces for indenting
-vim.opt.tabstop = 4
-vim.opt.softtabstop = 4
-vim.opt.shiftwidth = 4
-vim.opt.expandtab = true
+-- Bootstrap lazy.nvim
+local lazypath = vim.fn.stdpath 'data' .. '/lazy/lazy.nvim'
+if not (vim.uv or vim.loop).fs_stat(lazypath) then
+  local lazyrepo = 'https://github.com/folke/lazy.nvim.git'
+  local out = vim.fn.system { 'git', 'clone', '--filter=blob:none', '--branch=stable', lazyrepo, lazypath }
+  if vim.v.shell_error ~= 0 then
+    vim.api.nvim_echo({
+      { 'Failed to clone lazy.nvim:\n', 'ErrorMsg' },
+      { out, 'WarningMsg' },
+      { '\nPress any key to exit...' },
+    }, true, {})
+    vim.fn.getchar()
+    os.exit(1)
+  end
+end
+vim.opt.rtp:prepend(lazypath)
 
-vim.opt.smartindent = true
+-- Load Plugins =======================
 
--- allow all mouse interactions
-vim.opt.mouse = 'a'
+-- Lazy.nvim plugin manager
+require('lazy').setup {
+  spec = {
+    -- import your plugins
+    { import = 'plugins' },
+  },
+  -- Configure any other settings here. See the documentation for more details.
+  -- colorscheme that will be used when installing plugins.
+  install = { colorscheme = { 'habamax' } },
+  -- automatically check for plugin updates
+  checker = { enabled = false },
+  ui = {
+    icons = {},
+  },
+}
 
--- TODO: vim.opt.showmode = false
+require 'which-key'
 
--- Sync clipboard between OS and Neovim.
-vim.schedule(function()
-  vim.opt.clipboard = 'unnamedplus'
-end)
-
--- Enable break indent
-vim.opt.breakindent = true
-
--- Save undo history
-vim.opt.undofile = true
-
--- Case-insensitive searching UNLESS \C or one or more capital letters in the search term
-vim.opt.ignorecase = true
-vim.opt.smartcase = true
-
--- Keep signcolumn on by default
-vim.opt.signcolumn = 'yes'
-
--- Decrease update time
-vim.opt.updatetime = 250
-
--- Decrease mapped sequence wait time
-vim.opt.timeoutlen = 300
-
--- Configure how new splits should be opened
-vim.opt.splitright = true
-vim.opt.splitbelow = true
-
--- Sets how neovim will display certain whitespace characters in the editor.
---  See `:help 'list'`
---  and `:help 'listchars'`
-vim.opt.list = true
-vim.opt.listchars = { tab = '» ', trail = '·', nbsp = '␣' }
-
--- Preview substitutions live, as you type!
-vim.opt.inccommand = 'split'
-
--- Show which line your cursor is on
-vim.opt.cursorline = true
-
--- Minimal number of screen lines to keep above and below the cursor.
-vim.opt.scrolloff = 10
-
--- if performing an operation that would fail due to unsaved changes in the buffer (like `:q`),
--- instead raise a dialog asking if you wish to save the current file(s)
--- See `:help 'confirm'`
-vim.opt.confirm = true
-
--- [[ Auto installs ]]
-require 'denifia.auto_install'
-
--- [[ Load modules ]]
-require 'config.lazy'
-require 'config.mappings'
-require 'denifia.keymap'
-require 'denifia.automation'
---require 'denifia.lsp'
+require 'mappings'

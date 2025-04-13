@@ -1,6 +1,0 @@
-vim.lsp.enable('luals')
-
---funcss()
---sss =: 3
---end
-

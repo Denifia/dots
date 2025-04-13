@@ -1,20 +1,23 @@
--- <right> stays at h
+-- [[ Key Mappings ]]
 
--- move <down> to n from j
-vim.keymap.set({ 'n', 'x' }, 'n', 'j')
-vim.keymap.set({ 'n', 'x' }, 'N', 'J')
+-- Up/down/left/right
+vim.keymap.set({ 'n', 'x' }, 'h', 'h', { desc = 'Left (h)' })
+vim.keymap.set({ 'n', 'x' }, 'n', 'j', { desc = 'Down (j)' })
+vim.keymap.set({ 'n', 'x' }, 'N', 'J', { desc = '' })
+vim.keymap.set({ 'n', 'x' }, 'e', 'k', { desc = 'Up (k)' })
+vim.keymap.set({ 'n', 'x' }, 'E', 'K', { desc = '' })
+vim.keymap.set({ 'n', 'x' }, 'i', 'l', { desc = 'Right (l)' })
 
--- move <up> to e from k
-vim.keymap.set({ 'n', 'x' }, 'e', 'k')
-vim.keymap.set({ 'n', 'x' }, 'E', 'K')
+-- Moving around
+-- vim.keymap.set({ 'n', 'x' }, 'H', 'b', { desc = 'Word backwords (b)' })
+-- vim.keymap.set({ 'n', 'x' }, 'I', 'w', { desc = 'Word forwards (w)' })
+-- these aren't working :(
+-- vim.keymap.set({ 'n', 'x' }, '<C-h>', '^', { desc = 'Start of line (^)' })
+-- vim.keymap.set({ 'n', 'x' }, '<C-i>', '$', { desc = 'Start of line ($)' })
 
 -- move <insert> to k from i
-vim.keymap.set({ 'n', 'x' }, 'k', 'i')
-vim.keymap.set({ 'n', 'x' }, 'K', 'I')
-
--- move <left> to i from l
-vim.keymap.set({ 'n', 'x' }, 'i', 'l')
-vim.keymap.set({ 'n', 'x' }, 'I', 'L')
+vim.keymap.set({ 'n', 'x' }, 'k', 'i', { desc = 'Put after (i)' })
+vim.keymap.set({ 'n', 'x' }, 'K', 'I', { desc = 'Put before (I)' })
 
 -- move "got to previous item" to CTRL-e from CTRL-p
 vim.keymap.set('', '<C-e>', '<C-p>')

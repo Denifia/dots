@@ -76,17 +76,17 @@ return {
         -- delays in input and help on the wrong (default) mappings.
         presets = {
           -- adds help for operators like d, y, ...
-          operators = false,
+          operators = true,
           -- adds help for motions
-          motions = false,
+          motions = true,
           -- help for text objects triggered after entering an operator
-          text_objects = false,
+          text_objects = true,
           -- default bindings on <c-w>
           windows = true,
           -- misc bindings to work with windows
           nav = true,
           -- bindings for folds, spelling and others prefixed with z
-          z = false,
+          z = true,
           -- bindings for prefixed with g
           g = true,
         },
