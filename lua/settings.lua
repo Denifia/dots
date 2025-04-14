@@ -22,6 +22,8 @@ vim.opt.mouse = 'a'
 
 vim.opt.showmode = true
 
+vim.env.shell = '/usr/bin/fish'
+
 -- Sync clipboard between OS and Neovim.
 vim.schedule(function()
   vim.opt.clipboard = 'unnamedplus'

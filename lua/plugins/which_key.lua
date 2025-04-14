@@ -98,7 +98,7 @@ return {
     wk.add {
       {
         mode = { 'n' },
-        { '<leader>c', group = 'Commenting' },
+        { '<leader>c', group = 'Code' },
         { '<leader>s', group = 'Search (Telescope)' },
         { '<leader>w', group = 'Window' },
       },

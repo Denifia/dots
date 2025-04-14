@@ -45,3 +45,22 @@ vim.keymap.set('n', '<C-h>', '<C-w><C-h>', { desc = 'Move focus to the left wind
 vim.keymap.set('n', '<C-i>', '<C-w><C-l>', { desc = 'Move focus to the right window' })
 vim.keymap.set('n', '<C-n>', '<C-w><C-j>', { desc = 'Move focus to the lower window' })
 vim.keymap.set('n', '<C-e>', '<C-w><C-k>', { desc = 'Move focus to the upper window' })
+
+-- Helpers
+vim.keymap.set({ 'n' }, '<C-X>', '<cmd>.lua<CR>', { desc = 'Execute selected lua' })
+vim.keymap.set({ 'v' }, '<C-X>', "<cmd>'<,'>lua<CR>", { desc = 'Execute selected lua' })
+
+-- Code refactoring
+-- [G]o [R]efactoring
+-- - [R]eference
+-- - re[N]ame
+vim.keymap.set({ 'n', 'i' }, '<C-Space>', vim.lsp.buf.signature_help, { desc = 'Code hover information' })
+vim.keymap.set('n', '<leader>rr', 'grr', { desc = 'Go to references' })
+vim.keymap.set('n', '<leader>rn', 'grn', { desc = 'Rename' })
+vim.keymap.set('n', '<leader>ri', 'gri', { desc = 'Go to implementation' })
+vim.keymap.set('n', '<leader>rd', 'gd', { desc = 'Go to definition' })
+vim.keymap.set('n', '<leader>rD', 'gD', { desc = 'Go to declaration' })
+-- vim.keymap.del('n', '<leader>D')
+
+-- temp
+vim.keymap.set('n', '<leader>z', '<cmd>source %<CR>')
